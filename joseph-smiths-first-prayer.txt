@@ -1,0 +1,125 @@
+use_synth :piano
+
+use_bpm 75
+
+play1 = true
+play2 = true
+play3 = true
+play4 = true
+
+vol1 = 1.0
+vol2 = 1.0
+vol3 = 1.0
+vol4 = 1.0
+
+a = [
+    # Que manhã maravilhosa
+    [:D4, 0.75],[:Eb4, 0.25],[:F4, 1],[:F4, 1],[:F4, 1],[:Bb4, 1],[:Bb4, 1],[:A4, 2.0],[:r, 0,5],
+    # Brilha o sol no céu de anil
+    [:A4, 0.75],[:Bb4, 0.25],[:C5, 1],[:C5, 1],[:C5, 1],[:Eb5, 1],[:Eb5, 1],[:D5, 2.0],[:r, 0,5],
+    # Que canção gentil maviosa
+    [:D4, 0.75],[:Eb4, 0.25],[:F4, 1],[:F4, 1],[:F4, 1],[:Bb4, 1],[:Bb4, 1],[:A4, 2.0],[:r, 0,5],
+    # Das abelhas e aves mil
+    [:A4, 0.75],[:D5, 0.25],[:C5, 1],[:F4, 0.5],[:G4, 0.5],[:A4, 1],[:G4, 1],[:F4, 3.0],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:F4, 0.75],[:F4, 0.25],[:C5, 1.5],[:A4, 0.5],[:G4, 1],[:F4, 1],[:F4, 1],[:Bb4, 1.0],[:F4, 1.0],[:r, 0,5],
+    # José ora ao pai de amor
+    [:F4, 0.75],[:F4, 0.25],[:C5, 1.5],[:A4, 0.5],[:G4, 1],[:F4, 1],[:D5, 3],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:D4, 0.75],[:Eb4, 0.25],[:F4, 0.5],[:D5, 0.5],[:Bb4, 0.5],[:F4, 0.5],[:D4, 1],[:Bb4, 1],[:A4, 1],[:G4, 2],[:r, 0,5],
+    # José ora ao pai de amor
+    [:A4, 0.75],[:Bb4, 0.25],[:Bb4, 0.5],[:F4, 0.5],[:D4, 0.5],[:Bb3, 0.5],[:D4, 1],[:C4, 1],[:Bb3, 3],[:r, 0,5],
+]
+
+in_thread do
+  for j in 0..a.length-1
+    if play1
+        play a[j][0], sustain: 1, release: 1, amp: vol1
+        sleep a[j][1]
+    end
+  end
+end  
+
+b = [
+    # Que manhã maravilhosa
+    [:Bb3, 0.75],[:C4, 0.25],[:D4, 1],[:D4, 1],[:D4, 1],[:F4, 1],[:F4, 1],[:F4, 2.0],[:r, 0,5],
+    # Brilha o sol no céu de anil
+    [:F4, 0.75],[:G4, 0.25],[:A4, 1],[:A4, 1],[:F4, 1],[:F4, 1],[:F4, 3],[:r, 0,5],
+    # Que canção gentil maviosa
+    [:Bb3, 0.75],[:C4, 0.25],[:D4, 1],[:D4, 1],[:D4, 1],[:F4, 1],[:F4, 1],[:F4, 2.0],[:r, 0,5],
+    # Das abelhas e aves mil
+    [:F4, 0.75],[:F4, 0.25],[:F4, 1],[:F4, 0.5],[:F4, 0.5],[:F4, 1],[:E4, 1],[:C4, 3.0],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:F4, 0.75],[:F4, 0.25],[:Eb4, 1.5],[:Eb4, 0.5],[:Eb4, 1],[:Eb4, 1],[:Eb4, 1],[:D4, 1.0],[:C4, 1.0],[:r, 0,5],
+    # José ora ao pai de amor
+    [:F4, 0.75],[:F4, 0.25],[:Eb4, 1.5],[:Eb4, 0.5],[:Eb4, 1],[:Eb4, 1],[:D4, 3],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:Bb3, 0.75],[:C4, 0.25],[:D4, 1],[:D4, 1],[:Bb3, 1],[:F4, 1],[:F4, 1],[:Eb4, 2],[:r, 0,5],
+    # José ora ao pai de amor
+    [:Eb4, 0.75],[:Eb4, 0.25],[:D4, 1],[:Bb3, 1],[:Bb3, 1],[:A3, 1],[:Bb3, 3],[:r, 0,5],
+]
+
+in_thread do
+  for j in 0..b.length-1
+    if play2
+        play b[j][0], sustain: 1, release: 1, amp: vol2
+        sleep b[j][1]
+    end
+  end
+end  
+
+c = [
+    # Que manhã maravilhosa
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1],[:F3, 1],[:Bb3, 1],[:Bb3, 1],[:C4, 1],[:C4, 2.0],[:r, 0,5],
+    # Brilha o sol no céu de anil
+    [:C4, 0.75],[:C4, 0.25],[:C4, 1],[:C4, 1],[:C4, 1],[:C4, 1],[:Bb3, 3],[:r, 0,5],
+    # Que canção gentil maviosa
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1],[:F3, 1],[:Bb3, 1],[:Bb3, 1],[:C4, 1],[:C4, 2.0],[:r, 0,5],
+    # Das abelhas e aves mil
+    [:C4, 0.75],[:Bb3, 0.25],[:C4, 1],[:A3, 0.5],[:Bb3, 0.5],[:C4, 1],[:Bb3, 1],[:A3, 3.0],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:F3, 0.75],[:F3, 0.25],[:A3, 1.5],[:C4, 0.5],[:Bb3, 1],[:A3, 1],[:A3, 1],[:Bb3, 1.0],[:A3, 1.0],[:r, 0,5],
+    # José ora ao pai de amor
+    [:F3, 0.75],[:F3, 0.25],[:A3, 1.5],[:C4, 0.5],[:Eb3, 1],[:A3, 1],[:F3, 3],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1],[:F3, 1],[:F3, 1],[:Bb3, 1],[:Bb3, 1],[:Bb3, 2],[:r, 0,5],
+    # José ora ao pai de amor
+    [:G3, 0.75],[:G3, 0.25],[:F3, 1],[:F3, 1],[:F3, 1],[:Eb3, 1],[:D3, 3],[:r, 0,5],
+]
+
+in_thread do
+  for j in 0..c.length-1
+    if play3
+        play c[j][0], sustain: 1, release: 1, amp: vol3
+        sleep c[j][1]
+    end
+  end
+end  
+
+d = [
+    # Que manhã maravilhosa
+    [:Bb2, 0.75],[:Bb2, 0.25],[:Bb2, 1],[:Bb2, 1],[:Bb2, 1],[:D3, 1],[:F3, 1],[:F3, 2.0],[:r, 0,5],
+    # Brilha o sol no céu de anil
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1],[:F3, 1],[:A3, 1],[:A3, 1],[:Bb3, 3],[:r, 0,5],
+    # Que canção gentil maviosa
+    [:Bb2, 0.75],[:Bb2, 0.25],[:Bb2, 1],[:Bb2, 1],[:Bb2, 1],[:D3, 1],[:F3, 1],[:F3, 2.0],[:r, 0,5],
+    # Das abelhas e aves mil
+    [:F3, 0.75],[:Bb3, 0.25],[:A3, 1],[:D3, 0.5],[:D3, 0.5],[:C3, 1],[:C3, 1],[:F3, 3.0],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1.5],[:F3, 0.5],[:F3, 1],[:F3, 1],[:F3, 1],[:F3, 1.0],[:F3, 1.0],[:r, 0,5],
+    # José ora ao pai de amor
+    [:F3, 0.75],[:F3, 0.25],[:F3, 1.5],[:F3, 0.5],[:F3, 1],[:F3, 1],[:Bb3, 3],[:r, 0,5],
+    # Lá no bosque fervoroso
+    [:Bb3, 0.75],[:Bb3, 0.25],[:Bb3, 1],[:Bb3, 1],[:Bb3, 1],[:D3, 1],[:Eb3, 1],[:Eb3, 2],[:r, 0,5],
+    # José ora ao pai de amor
+    [:Eb3, 0.75],[:Eb3, 0.25],[:F3, 1],[:F3, 1],[:F2, 1],[:F2, 1],[:Bb2, 3],[:r, 0,5],
+]
+
+in_thread do
+  for j in 0..d.length-1
+    if play4
+        play d[j][0], sustain: 1, release: 1, amp: vol4
+        sleep d[j][1]
+    end
+  end
+end  
