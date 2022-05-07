@@ -2,3 +2,4 @@
 
 - I am child of God
 - I need thee every hour
+- Joseph smiths first prayer
